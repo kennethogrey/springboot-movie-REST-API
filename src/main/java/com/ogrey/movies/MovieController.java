@@ -28,4 +28,9 @@ public class MovieController {
     public ResponseEntity<Optional<Movie>> deleteMovie(@PathVariable String imdbId){
         return new ResponseEntity<>(movieService.deleteMovie(imdbId), HttpStatus.OK);
     }
+
+    @PostMapping("/{imdbId}/update")
+    public ResponseEntity<Optional<Movie>> updateMovie(@RequestBody String imdbId){
+        return new ResponseEntity<>(movieService.deleteMovie(imdbId), HttpStatus.OK);
+    }
 }
